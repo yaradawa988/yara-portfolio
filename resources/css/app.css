@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ===== Reveal / fade-up animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 500ms cubic-bezier(.2,.8,.2,1), transform 500ms cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight card hover shadow  */
+.card-hover {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* Optional small utility to smooth-focus */
+:focus {
+  outline: none;
+}
+
