@@ -16,6 +16,7 @@
 
     {{-- Lucide Icons --}}
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 @php
     use App\Models\ConversationMessage;
@@ -189,7 +190,7 @@
         Profile
     </a>
 
-    {{-- Messages Button (inside dropdown) --}}
+    
     <div x-data="{ openChat:false }" class="relative">
         <button @click="openChat = !openChat"
                 class="w-full text-left px-4 py-2 text-sm flex items-center gap-2 
@@ -334,6 +335,16 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         lucide.createIcons();
+    });
+</script>
+<!-- AOS animation script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 900,
+        easing: "ease-in-out",
+        once: true,
     });
 </script>
 

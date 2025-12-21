@@ -63,7 +63,7 @@
         <section>
             <h2 class="text-2xl font-semibold mb-3 text-slate-800 dark:text-white">7. Contact Me</h2>
             <p>
-                If you have any questions about this Privacy Policy, feel free to contact us at:
+                If you have any questions about this Privacy Policy, feel free to contact me at:
             </p>
             <p class="mt-2">
                 <a href="mailto:yara.mas484@gmail.com" class="text-sky-600 dark:text-sky-400 hover:underline">
