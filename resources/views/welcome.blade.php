@@ -12,7 +12,7 @@
                 <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight fade-up">
                     Hello — I'm <span class="text-sky-600 dark:text-sky-400">Yara Dawa</span><br>
                     <span class="text-slate-800 dark:text-gray-200">
-                        Software Engineer & Laravel Developer | Web & Mobile Backend Solutions
+                        Software Engineer & Laravel Developer | Web & Mobile Backend Solutions | React.js
                     </span>
                 </h1>
 
@@ -36,34 +36,47 @@
             </div>
 
             {{-- Project Card --}}
-            <div class="fade-up delay-200">
-                <div class="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl hover:shadow-2xl transform hover:scale-[1.03] transition duration-300">
-                    <img src="{{ asset('images/portfolio-hero.jpg') }}" class="w-full h-64 object-cover" loading="lazy">
+<div class="fade-up delay-200">
+    <div class="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl hover:shadow-2xl transform hover:scale-[1.03] transition duration-300">
 
-                    <div class="p-6 space-y-3">
-                        <h3 class="font-semibold text-lg text-gray-900 dark:text-gray-100">
-                            Featured Project
-                        </h3>
+        {{-- Project Image --}}
+        <img src="{{ asset('images/logo.png') }}" class="w-full h-64 object-cover" loading="lazy">
 
-                        <p class="text-sm text-slate-600 dark:text-gray-300">
-                            A highlighted system showcasing backend engineering with Laravel,
-                            secure APIs, and third-party integrations.
-                        </p>
+        <div class="p-6 space-y-3">
 
-                        <div class="flex items-center gap-3 text-sm pt-2">
-                            <a href="" class="flex items-center gap-1 text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-medium">
-                                <i data-lucide="eye" class="w-4 h-4"></i> Live Demo
-                            </a>
- <a href=""
-                               class="flex items-center gap-1 text-sky-600 hover:text-sky-800 font-medium transition">
-                                <i data-lucide="eye" class="w-4 h-4"></i> View Project
-                            </a>
-                            <span class="text-xs text-gray-400 dark:text-gray-400">•</span>
-                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
-                        </div>
-                    </div>
-                </div>
+            {{-- Project Title --}}
+            <h3 class="font-semibold text-lg text-gray-900 dark:text-gray-100">
+                Multi-Vendor Delivery Platform
+            </h3>
+
+            {{-- Project Description --}}
+            <p class="text-sm text-slate-600 dark:text-gray-300">
+                A Laravel 10 based delivery platform featuring user, driver, and admin dashboards,
+                real-time tracking with Google Maps, order management, and a complete shopping cart system.
+            </p>
+
+            {{-- Footer --}}
+            <div class="flex items-center gap-3 text-sm pt-2">
+
+                {{-- Demo Link --}}
+                <a href="https://your-demo-link.com"
+                   class="flex items-center gap-1 text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 font-medium">
+                    <i data-lucide="play" class="w-4 h-4"></i> Live Demo
+                </a>
+
+                {{-- View Project / GitHub --}}
+                <a href="https://github.com/yaradawa988/Rahtak-Delivery-System.git"
+                   class="flex items-center gap-1 text-sky-600 hover:text-sky-800 font-medium transition">
+                    <i data-lucide="code" class="w-4 h-4"></i> View Project
+                </a>
+
+                <span class="text-xs text-gray-400 dark:text-gray-400">•</span>
+                <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
             </div>
+        </div>
+    </div>
+</div>
+
 
         </div>
     </div>
