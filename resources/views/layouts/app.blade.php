@@ -39,9 +39,10 @@
     <header 
         x-data="{ scrolled: false, menuOpen: false, userMenu: false }"
         x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
-        :class="scrolled 
-    ? 'shadow-sm bg-white dark:bg-gray-800'
-    : 'bg-white dark:bg-gray-800'"
+      :class="scrolled 
+    ? 'text-slate-700 hover:text-sky-600 dark:text-gray-300 dark:hover:text-sky-400' 
+    : 'text-slate-900 hover:text-gray-600 dark:text-white dark:hover:text-sky-200'"
+
 
         class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out">
 
@@ -92,14 +93,17 @@
                     @endphp
 
                     @foreach($links as $link)
-                        <a href="{{ route($link['route']) }}"
-                           :class="scrolled ? 'text-slate-700 hover:text-sky-600' : 'text-white hover:text-sky-200'"
-                           class="text-sm font-medium transition-colors duration-200 
-                           {{ request()->routeIs($link['route']) ? 'underline underline-offset-4 font-semibold' : '' }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @endforeach
+                      <a href="{{ route($link['route']) }}"
+   :class="scrolled 
+        ? 'text-slate-700 hover:text-sky-600 dark:text-gray-300 dark:hover:text-sky-400' 
+        : 'text-slate-900 hover:text-gray-600 dark:text-white dark:hover:text-sky-200'"
+   class="text-sm font-medium transition-colors duration-200 
+   {{ request()->routeIs($link['route']) ? 'underline underline-offset-4 font-semibold' : '' }}">
+    {{ $link['label'] }}
+</a>
 
+                    @endforeach
+@auth
     <div x-data="{ notify:false }" class="relative">
     <button @click="notify=!notify"
         class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
@@ -153,7 +157,7 @@
     </div>
 </div>
 
-
+@endauth
 
 </nav>
 

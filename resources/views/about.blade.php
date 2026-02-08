@@ -29,7 +29,7 @@
                         shadow-[0_0_25px_5px_rgba(56,189,248,0.5)]
                         dark:shadow-[0_0_25px_5px_rgba(56,189,248,0.3)]
                         overflow-hidden">
-                <img src="{{ asset('images/www.jpeg') }}" 
+                <img src="{{ asset('images/ww.jpg') }}" 
                      alt="My Photo" 
                      class="w-full h-full object-cover">
             </div>

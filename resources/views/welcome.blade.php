@@ -34,13 +34,14 @@
                     </p>
                 </div>
             </div>
-
-            {{-- Project Card --}}
+{{-- Project Card --}}
 <div class="fade-up delay-200">
     <div class="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl hover:shadow-2xl transform hover:scale-[1.03] transition duration-300">
 
         {{-- Project Image --}}
-        <img src="{{ asset('images/logo.png') }}" class="w-full h-64 object-cover" loading="lazy">
+        <img src="{{ asset('images/logo.png') }}" 
+             class="w-full h-64 object-contain bg-gray-100 dark:bg-gray-900" 
+             loading="lazy">
 
         <div class="p-6 space-y-3">
 

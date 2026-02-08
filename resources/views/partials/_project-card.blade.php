@@ -1,12 +1,12 @@
 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-gray-700 hover:shadow-2xl transition transform hover:-translate-y-1 overflow-hidden border border-slate-100 dark:border-gray-700 flex flex-col">
   
     @if($project->cover_image)
-        <div class="relative">
+        <div class="relative h-48 bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
             <img src="{{ $project->cover_image ? asset('storage/'.$project->cover_image) : asset('images/placeholder.png') }}" 
                  alt="{{ $project->title }}" 
-                 class="w-full h-48 object-cover">
+                 class="w-full h-full object-contain">
             
-            {{-- إذا كان المشروع مميز --}}
+            {{-- If featured --}}
             @if($project->featured)
                 <span class="absolute top-3 left-3 bg-sky-500 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
                     <i data-lucide="star" class="w-4 h-4"></i> Featured
@@ -15,7 +15,7 @@
         </div>
     @endif
 
-     <div class="p-5 flex flex-col flex-grow">
+    <div class="p-5 flex flex-col flex-grow">
         <h3 class="text-xl font-semibold text-slate-800 dark:text-gray-100 mb-1 flex items-center gap-2">
             <i data-lucide="folder-code" class="w-5 h-5 text-sky-600"></i>
             Title: {{ $project->title }}
@@ -25,7 +25,6 @@
             Description : {{ $project->short_description ?? 'No description available.' }}
         </p>
 
-        
         <div class="mt-auto pt-3 border-t border-slate-100 dark:border-gray-700 flex justify-between items-center text-sm">
             <a href="{{ route('projects.show', $project->slug) }}" 
                class="flex items-center gap-1 text-sky-600 hover:text-sky-800 font-medium transition">
@@ -40,7 +39,6 @@
             @endif
         </div>
 
-        
         <div class="mt-4 flex items-center gap-4 text-slate-500 dark:text-gray-400 text-sm">
             @if($project->live_url)
                 <a href="{{ $project->live_url }}" target="_blank" 
